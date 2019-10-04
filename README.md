@@ -13,7 +13,7 @@ Linked Lists – using Java's built-in *LinkedList* class.
 •	**Exit:** Pressing ‘exit’ button will allow users to exit the program.
 
 
-# YouTube Videos where I develop a solution to this question:
+# YouTube Video where I develop a solution to this question:
 
 ### Java - LinkedLists - Students GUI - Add, Delete, Display
 
