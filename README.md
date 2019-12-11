@@ -20,4 +20,14 @@ Linked Lists – using Java's built-in *LinkedList* class.
 https://www.youtube.com/watch?v=0KdG9DZgi6I&list=PLfKyhM9sqOY5bHuIgk_taSa7qEBh8EPce&index=15&t=0s
 
 
+# More Linked Lists:
+
+If you'd like to learn more about Linked Lists, see my 2 part special:
+
+* LinkedList - From Scratch - Part 1 of 2:
+https://youtu.be/BuntNoC8Cq0
+
+* LinkedList - From Scratch - Part 2 of 2 here:
+https://youtu.be/WdXKpOIEzoo
+
 EOF.
