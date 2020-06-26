@@ -19,7 +19,7 @@ Write a Java class named StudentEmail that has data members for the **name** and
 •	Add Edit functionality, a application title, center the error dialogs in the applications window, and other improvements.
 
 
-# YouTube Video where I develop a solution to this question:
+# YouTube Video where I develop solutions to these questions:
 
 * Java - LinkedLists - Students GUI - Add, Delete, Display - Part 01:
 <br>https://www.youtube.com/watch?v=0KdG9DZgi6I
