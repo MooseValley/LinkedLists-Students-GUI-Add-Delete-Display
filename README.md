@@ -2,7 +2,9 @@
 
 Linked Lists – using Java's built-in *LinkedList* class.
 
-1. Write a Java class named StudentEmail that has data members for the **name** and **number** of a student. The class should have a **constructor** and appropriate **accessor and mutator** methods. In addition, the **toString** method should include the output information with student name, student number and the corresponding e-mail address. The e-mail address is a string with the student number and @my.email (such as   s123@my.email). Then you write a program that creates a GUI with two labelled text fields, each one for name and student number, a text area to display the information, and four buttons:
+## Part 01.
+
+Write a Java class named StudentEmail that has data members for the **name** and **number** of a student. The class should have a **constructor** and appropriate **accessor and mutator** methods. In addition, the **toString** method should include the output information with student name, student number and the corresponding e-mail address. The e-mail address is a string with the student number and @my.email (such as   s123@my.email). Then you write a program that creates a GUI with two labelled text fields, each one for name and student number, a text area to display the information, and four buttons:
 
 •	**Add:**  when the user enters data into the text fields and clicks the ‘add’ button, a StudentEmail object is created and stored in a LinkedList, and in then the student name, number and e-mail is displayed on the text area.
 
@@ -12,12 +14,19 @@ Linked Lists – using Java's built-in *LinkedList* class.
 
 •	**Exit:** Pressing ‘exit’ button will allow users to exit the program.
 
+## Part 02:
+
+•	Add Edit functionality, a application title, center the error dialogs in the applications window, and other improvements.
+
 
 # YouTube Video where I develop a solution to this question:
 
-### Java - LinkedLists - Students GUI - Add, Delete, Display
+### Java - LinkedLists - Students GUI - Add, Delete, Display - Part 01:
 
 https://www.youtube.com/watch?v=0KdG9DZgi6I&list=PLfKyhM9sqOY5bHuIgk_taSa7qEBh8EPce&index=15&t=0s
+
+### Java - LinkedLists - Students GUI - Add, Delete, Display - Part 02:
+https://www.youtube.com/watch?v=LXMg1E6gJJ0&list=PLfKyhM9sqOY5bHuIgk_taSa7qEBh8EPce&index=15&t=0s
 
 
 # More Linked Lists:

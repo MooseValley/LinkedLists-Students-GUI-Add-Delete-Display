@@ -9,11 +9,16 @@
  Source File: StudentEmailGUI.java
  Description: Part of the "Java - LinkedLists - Students GUI - Add, Delete, Display"
               video tutorials.  The latest source code.
+              Part 02: Add Edit and other functionality.
+
+Videos in this series:
+* Java - LinkedLists - Students GUI - Add, Delete, Display - Part 01
+https://www.youtube.com/watch?v=0KdG9DZgi6I
+* Java - LinkedLists - Students GUI - Add, Delete, Display - Part 02
 
 See my YouTube Channel:
   * Mike's Java Software Development Tutorial Videos:
     http://tinyurl.com/MikesJavaVideos
-
 */
 
 import javax.swing.*;
@@ -32,13 +37,19 @@ public class StudentEmailGUI extends JFrame
    JLabel     nameLabel         = new JLabel     ("Name: ");
    JTextField nameTextField     = new JTextField (10);
 
+   JButton    testDataButton    = new JButton ("Test Data");
    JButton    addButton         = new JButton ("Add");
    JButton    deleteButton      = new JButton ("Delete");
+   JButton    editButton        = new JButton ("Edit");
+   JButton    editSaveButton    = new JButton ("Save");
    JButton    displayAllButton  = new JButton ("Display All");
    JButton    exitButton        = new JButton ("Exit");
 
+
    // Class Instance Data:
    private LinkedList<StudentEmail> studentLinkedList = new LinkedList<StudentEmail> ();
+   private int editIndex;
+
 
    public StudentEmailGUI ()
    {
@@ -53,7 +64,10 @@ public class StudentEmailGUI extends JFrame
       flow1Panel.add (nameLabel);
       flow1Panel.add (nameTextField);
 
+      flow2Panel.add (testDataButton);
       flow2Panel.add (addButton);
+      flow2Panel.add (editButton);
+      flow2Panel.add (editSaveButton);
       flow2Panel.add (deleteButton);
       flow2Panel.add (displayAllButton);
       flow2Panel.add (exitButton);
@@ -61,14 +75,21 @@ public class StudentEmailGUI extends JFrame
       gridPanel.add (flow1Panel);
       gridPanel.add (flow2Panel);
 
+      editSaveButton.setEnabled (false);
+
       add (studentTextArea, BorderLayout.CENTER);
       add (gridPanel,       BorderLayout.SOUTH);
 
 
       addButton.addActionListener        (event -> addStudent ());
       displayAllButton.addActionListener (event -> displayAll ());
+      editButton.addActionListener       (event -> editStudent ());
+      editSaveButton.addActionListener   (event -> editSaveStudent ());
       exitButton.addActionListener       (event -> exitApplication ());
       deleteButton.addActionListener     (event -> deleteStudent ());
+      testDataButton.addActionListener   (event -> addTestData ());
+
+      setTitle ("Student Linked List - v0.02");
    }
 
    private boolean isStudentIdInLinkedList (String idStr)
@@ -90,7 +111,8 @@ public class StudentEmailGUI extends JFrame
    {
       if (isStudentIdInLinkedList (idTextField.getText()) == true)
       {
-         JOptionPane.showMessageDialog (null, "Error: student ID is already in the database.");
+         JOptionPane.showMessageDialog (StudentEmailGUI.this,
+                              "Error: student ID is already in the database.");
       }
       else
       {
@@ -110,7 +132,7 @@ public class StudentEmailGUI extends JFrame
          }
          catch (StudentEmailException error)
          {
-            JOptionPane.showMessageDialog (null, error.toString ());
+            JOptionPane.showMessageDialog (StudentEmailGUI.this, error.toString ());
             // myLabel.setText (error.toString ());
 
 
@@ -123,11 +145,13 @@ public class StudentEmailGUI extends JFrame
    {
       if (studentLinkedList.size() == 0)
       {
-         JOptionPane.showMessageDialog (null, "Error: Database is empty.");
+         JOptionPane.showMessageDialog (StudentEmailGUI.this,
+                                        "Error: Database is empty.");
       }
       else if (isStudentIdInLinkedList (idTextField.getText()) == false)
       {
-         JOptionPane.showMessageDialog (null, "Error: student ID is not in the database.");
+         JOptionPane.showMessageDialog (StudentEmailGUI.this,
+                                       "Error: student ID is not in the database.");
       }
       else
       {
@@ -146,6 +170,93 @@ public class StudentEmailGUI extends JFrame
          nameTextField.setText("");
          idTextField.setText("");
       }
+   }
+
+   private void editStudent ()
+   {
+      if (studentLinkedList.size() == 0)
+      {
+         JOptionPane.showMessageDialog (StudentEmailGUI.this,
+                                        "Error: Database is empty.");
+      }
+      else if (isStudentIdInLinkedList (idTextField.getText()) == false)
+      {
+         JOptionPane.showMessageDialog (StudentEmailGUI.this,
+                                        "Error: student ID is not in the database.");
+      }
+      else
+      {
+         editIndex = -1;
+
+         for (int s = 0; s < studentLinkedList.size(); s++)
+         {
+            String currId = studentLinkedList.get (s).getId ();
+
+            if (currId.compareToIgnoreCase (idTextField.getText()) == 0)
+            {
+               editIndex = s;
+               s = studentLinkedList.size(); // Exit Loop
+            }
+         }
+
+         // index cannot be less than 0, because we checked if the Stud Id was in
+         // the linked list before we looped above.
+         if (editIndex >= 0)
+         {
+            editSaveButton.setEnabled   (true);
+
+            editButton.setEnabled       (false);
+            testDataButton.setEnabled   (false);
+            addButton.setEnabled        (false);
+            deleteButton.setEnabled     (false);
+            displayAllButton.setEnabled (false);
+            exitButton.setEnabled       (false);
+
+            nameTextField.setText (studentLinkedList.get (editIndex).getName () );
+            //idTextField.setText   (studentLinkedList.get (editIndex).getId () );
+         }
+
+
+      }
+
+   }
+
+   private void editSaveStudent ()
+   {
+      // This code will preserve the changes the user made to the student
+      // they were editing - and save them back into the Linked List.
+
+      studentLinkedList.get (editIndex).setName (nameTextField.getText() );
+      studentLinkedList.get (editIndex).setId   (idTextField.getText() );
+
+      displayAll ();
+
+      nameTextField.setText ("");
+      idTextField.setText   ("");
+
+      editSaveButton.setEnabled   (false);
+
+      editButton.setEnabled       (true);
+      testDataButton.setEnabled   (true);
+      addButton.setEnabled        (true);
+      deleteButton.setEnabled     (true);
+      displayAllButton.setEnabled (true);
+      exitButton.setEnabled       (true);
+   }
+
+   private void addTestData ()
+   {
+      nameTextField.setText ("Moose");
+      idTextField.setText   ("s123");
+      addStudent ();
+
+      nameTextField.setText ("Frankie");
+      idTextField.setText   ("s111");
+      addStudent ();
+
+      nameTextField.setText ("Bella");
+      idTextField.setText   ("s789");
+      addStudent ();
    }
 
    private void displayAll ()
