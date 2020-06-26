@@ -21,12 +21,11 @@ Write a Java class named StudentEmail that has data members for the **name** and
 
 # YouTube Video where I develop a solution to this question:
 
-### Java - LinkedLists - Students GUI - Add, Delete, Display - Part 01:
+* Java - LinkedLists - Students GUI - Add, Delete, Display - Part 01:
+https://www.youtube.com/watch?v=0KdG9DZgi6I
 
-https://www.youtube.com/watch?v=0KdG9DZgi6I&list=PLfKyhM9sqOY5bHuIgk_taSa7qEBh8EPce&index=15&t=0s
-
-### Java - LinkedLists - Students GUI - Add, Delete, Display - Part 02:
-https://www.youtube.com/watch?v=LXMg1E6gJJ0&list=PLfKyhM9sqOY5bHuIgk_taSa7qEBh8EPce&index=15&t=0s
+* Java - LinkedLists - Students GUI - Add, Delete, Display - Part 02:
+https://www.youtube.com/watch?v=LXMg1E6gJJ0
 
 
 # More Linked Lists:
