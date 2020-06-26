@@ -22,10 +22,10 @@ Write a Java class named StudentEmail that has data members for the **name** and
 # YouTube Video where I develop a solution to this question:
 
 * Java - LinkedLists - Students GUI - Add, Delete, Display - Part 01:
-https://www.youtube.com/watch?v=0KdG9DZgi6I
+<br>https://www.youtube.com/watch?v=0KdG9DZgi6I
 
 * Java - LinkedLists - Students GUI - Add, Delete, Display - Part 02:
-https://www.youtube.com/watch?v=LXMg1E6gJJ0
+<br>https://www.youtube.com/watch?v=LXMg1E6gJJ0
 
 
 # More Linked Lists:
@@ -33,9 +33,9 @@ https://www.youtube.com/watch?v=LXMg1E6gJJ0
 If you'd like to learn more about Linked Lists, see my 2 part special:
 
 * LinkedList - From Scratch - Part 1 of 2:
-https://youtu.be/BuntNoC8Cq0
+<br>https://youtu.be/BuntNoC8Cq0
 
 * LinkedList - From Scratch - Part 2 of 2 here:
-https://youtu.be/WdXKpOIEzoo
+<br>https://youtu.be/WdXKpOIEzoo
 
 EOF.
