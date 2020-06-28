@@ -1,18 +1,24 @@
 /*
       Author: Moose OMalley
-         WEB: Moose OMalley's Software Valley:
-              http://moosesoftware.netau.net
-      GitHub: All source code for the code developed in my videos is here:
-              https://github.com/MooseValley
-     YouTube: Mike's Java Software Development Tutorial Videos:
-              http://tinyurl.com/MikesJavaVideos
  Source File: StudentEmailException.java
  Description: Part of the "Java - LinkedLists - Students GUI - Add, Delete, Display"
               video tutorials.  The latest source code.
 
-See my YouTube Channel:
-  * Mike's Java Software Development Tutorial Videos:
-    http://tinyurl.com/MikesJavaVideos
+
+The Students GUI Linked List tutorial series:
+* Java - LinkedLists - Students GUI - Add, Delete, Display - Part 01
+https://youtu.be/0KdG9DZgi6I
+* Java - LinkedLists - Students GUI - Add, Delete, Display - Part 02 - Edit
+https://youtu.be/LXMg1E6gJJ0
+* Java - LinkedLists - Students GUI - Add, Delete, Display - Part 03 - NetBeans
+https://youtu.be/xrNSa0nXDLE
+
+Java Source code is in my GitHub:
+* https://github.com/MooseValley/LinkedLists-Students-GUI-Add-Delete-Display
+
+See my other Java videos:
+* Mike's Java Software Development Tutorial Videos:
+http://tinyurl.com/MikesJavaVideos
 
 */
 // IllegalArgumentException UN-CHECKED
