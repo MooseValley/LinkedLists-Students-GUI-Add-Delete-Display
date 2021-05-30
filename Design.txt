@@ -1,0 +1,28 @@
+
+MVC
+Model View Controller
+
+Model
+	Data classes.  e.g. StudentEmail
+
+View
+	user interface.  e.g. StudentEmailGUI
+
+Controller
+	main work / main processing
+
+----------------------------------------
+MVC Model View Controller
+
+GUI
+	responsible for your GUI, buttons, labels, etc
+
+
+Data class
+	data
+	validation rules
+
+Array/Linked List + processing
+	add, edit, delete, ...
+	save / load to/from file
+
